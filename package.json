@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jjenks713/charlees-comfort-kitchen/issues"
   },
-  "homepage": "https://github.com/jjenks713/charlees-comfort-kitchen#readme"
+  "homepage": "https://github.com/jjenks713/charlees-comfort-kitchen#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
