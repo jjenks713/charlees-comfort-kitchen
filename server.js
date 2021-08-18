@@ -19,6 +19,10 @@ app.get("/", function(req, res) {
     // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "index.html"));
   });
+app.get("/about", function(req, res) {
+    // res.send("Welcome to the Star Wars Page!")
+    res.sendFile(path.join(__dirname, "about.html"));
+    });
 
 // Import routes and give the server access to them.
 /* var routes = require("./routes/index");
