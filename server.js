@@ -23,6 +23,10 @@ app.get("/about", function(req, res) {
     // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "about.html"));
     });
+app.get("/calendar", function(req, res) {
+    // res.send("Welcome to the Star Wars Page!")
+    res.sendFile(path.join(__dirname, "calendar.html"));
+    });
 
 // Import routes and give the server access to them.
 /* var routes = require("./routes/index");
