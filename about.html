@@ -71,5 +71,21 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                console.log('check');
+                $(window).scroll(function() {    
+                    var scroll = $(window).scrollTop();
+
+                    if (scroll >= 5) {
+                        console.log('scrolling');
+                        $(".navbar").addClass("navbar-shrink");
+                    } else {
+                        $(".navbar").removeClass("navbar-shrink");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
