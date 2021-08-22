@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jjenks713/charlees-comfort-kitchen#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sendmail": "^1.6.1"
   }
 }

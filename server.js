@@ -1,7 +1,7 @@
 var express = require("express");
 var path = require('path');
 
-var PORT = process.env.PORT || 8081;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -16,22 +16,35 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", function(req, res) {
-    // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "index.html"));
   });
+
 app.get("/about", function(req, res) {
-    // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "about.html"));
     });
+
 app.get("/calendar", function(req, res) {
-    // res.send("Welcome to the Star Wars Page!")
     res.sendFile(path.join(__dirname, "calendar.html"));
     });
 
-// Import routes and give the server access to them.
-/* var routes = require("./routes/index");
+app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "contact.html"));
+    });
 
-app.use(routes); */
+/* app.post("/form", function(req, res){
+
+  //turned off to not recieve messages until deployed
+  var sendmail = require('sendmail')();
+  sendmail({
+      from: req.body.userEmail,
+      to: 'jenkin79@gmail.com',
+      subject: req.body.userSubject,
+      html: req.body.userText,
+    }, function(err, reply) {
+      console.log(err && err.stack);
+      console.dir(reply);
+  });
+}); */
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
