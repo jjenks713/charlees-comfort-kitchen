@@ -11691,3 +11691,7 @@ body {
 .footer {
   padding: 5rem 0;
 }
+#bottom-ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
