@@ -42,7 +42,7 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="/">Charlees Comfort Kitchen</a>
+                <a class="navbar-brand" href="/"><img style="width:150px;" src="/assets/img/logo-test.PNG"></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -52,9 +52,9 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
                         <li class="nav-item"><a class="nav-link" href="/#projects">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contact">Catering</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Mobile App</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/#projects">Order Online</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdXKYFtcBoqubnyrzsC944gC4-mrRqRx1bypos8qILn08BoWg/viewform?usp=sf_link" target="_blank">Subscribe</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Mobile App<br><p class="nav-coming" style="font-size: xx-small;">(Coming Soon)</p></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">The Twisted Lemon<br><p class="nav-coming" style="font-size: xx-small;">(Coming Soon)</p></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Subscribe</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,112 +84,102 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
                         </div>
             </div>
         </section>
-              <!-- Signup-->
-              <section class="signup-section" id="signup">
-                <div class="container px-4 px-lg-5">
-                    <div class="row gx-4 gx-lg-5">
-                        <div class="col-md-10 col-lg-8 mx-auto text-center">
-                            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                            <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input-->
-                                <div class="row input-group-newsletter">
-                                    <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                    <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <form class="form-signup" id="contactForm">
+                            <!-- Email address input-->
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email..." aria-label="Enter emaail..." required/></div>
+                                <div class="col"><input class="form-control" id="userName" type="name" placeholder="Name" aria-label="Name" required/></div>
+                                <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Notify Me!</button></div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div id="submitSuccessMessage">
+                                <div class="text-center mb-3 mt-2 text-white">
+                                    <div class="fw-bolder">Form submission successful!</div>
                                 </div>
-                                <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                                <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3 mt-2 text-white">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        To activate this form, sign up at
-                                        <br />
-                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5" >
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <a target="_blank" href="https://www.google.com/search?q=charlees+comfort+kitchen&rlz=1C1CHBF_enUS947US947&tbm=lcl&sxsrf=ALeKk01erEqGQBNDsv_7RkHpADsIBLOmFA%3A1629240345499&ei=GTwcYdPOHZnStQbP0JeQDQ&oq=charlees+&gs_l=psy-ab.1.0.0i512k1l2j0i512i10k1l2j0i512k1j0i512i10k1j0i512k1j0i512i10k1l3.70186.71717.0.73261.9.9.0.0.0.0.142.832.0j7.7.0....0...1c.1.64.psy-ab..2.7.831...35i39k1j0i273k1j0i512i433k1j0i512i433i131k1j0i67k1j0i433i131i67k1j0i433i67k1j0i512i457i10k1.0.xoSfRhv1gNk">
+                            <div class="card py-4 h-100">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                    <h4 class="text-uppercase m-0">Address</h4>
+                                    <hr class="my-4 mx-auto" />
+                                    <div class="small text-black-50">475 S Main St, Ephraim, UT 84627</div>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                            </form>
+                            </div>                        
+                        </a>
+
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Contact</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="mailto:contact@cckitchen.co">contact@cckitchen.co</a></div>
+                                <div class="small text-black-50">+1 (555) 902-8832</div><br>
+                                <div class="small text-black-50">Email us directly</div>
+                                <a href="/contact">Click Here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-clock-ten text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Hours</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">
+                                    <ul id='bottom-ul'>
+                                        <li>Mon - Closed</li>
+                                        <li>Tue - 11am-9pm</li>
+                                        <li>Wed - 11am-9pm</li>
+                                        <li>Thu - 11am-9pm</li>
+                                        <li>Fri - 11am-9pm</li>
+                                        <li>Sat - 11am-9pm</li>
+                                        <li>Sun - Closed</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-                <!-- Contact-->
-                <section class="contact-section bg-black">
-                    <div class="container px-4 px-lg-5">
-                        <div class="row gx-4 gx-lg-5" >
-                            <div class="col-md-4 mb-3 mb-md-0">
-                                <a target="_blank" href="https://www.google.com/search?q=charlees+comfort+kitchen&rlz=1C1CHBF_enUS947US947&tbm=lcl&sxsrf=ALeKk01erEqGQBNDsv_7RkHpADsIBLOmFA%3A1629240345499&ei=GTwcYdPOHZnStQbP0JeQDQ&oq=charlees+&gs_l=psy-ab.1.0.0i512k1l2j0i512i10k1l2j0i512k1j0i512i10k1j0i512k1j0i512i10k1l3.70186.71717.0.73261.9.9.0.0.0.0.142.832.0j7.7.0....0...1c.1.64.psy-ab..2.7.831...35i39k1j0i273k1j0i512i433k1j0i512i433i131k1j0i67k1j0i433i131i67k1j0i433i67k1j0i512i457i10k1.0.xoSfRhv1gNk">
-                                    <div class="card py-4 h-100">
-                                        <div class="card-body text-center">
-                                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                            <h4 class="text-uppercase m-0">Address</h4>
-                                            <hr class="my-4 mx-auto" />
-                                            <div class="small text-black-50">475 S Main St, Ephraim, UT 84627</div>
-                                        </div>
-                                    </div>                        
-                                </a>
-        
-                            </div>
-                            <div class="col-md-4 mb-3 mb-md-0">
-                                <div class="card py-4 h-100">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-envelope text-primary mb-2"></i>
-                                        <h4 class="text-uppercase m-0">Contact</h4>
-                                        <hr class="my-4 mx-auto" />
-                                        <div class="small text-black-50"><a href="mailto:contact@cckitchen.co">contact@cckitchen.co</a></div>
-                                        <div class="small text-black-50">+1 (555) 902-8832</div><br>
-                                        <div class="small text-black-50">Email us directly</div>
-                                        <a href="/contact">Click Here</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3 mb-md-0">
-                                <div class="card py-4 h-100">
-                                    <div class="card-body text-center">
-                                        <i class="fas fa-clock-ten text-primary mb-2"></i>
-                                        <h4 class="text-uppercase m-0">Hours</h4>
-                                        <hr class="my-4 mx-auto" />
-                                        <div class="small text-black-50">
-                                            <ul id='bottom-ul'>
-                                                <li>Mon - Closed</li>
-                                                <li>Tue - 11am-9pm</li>
-                                                <li>Wed - 11am-9pm</li>
-                                                <li>Thu - 11am-9pm</li>
-                                                <li>Fri - 11am-9pm</li>
-                                                <li>Sat - 11am-9pm</li>
-                                                <li>Sun - Closed</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="https://www.facebook.com/CharleesComfortKitchen" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="https://www.instagram.com/charleescomfortkitchen/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Charlees Comfort Kitchen 2021</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="public/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="/js/scripts.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){

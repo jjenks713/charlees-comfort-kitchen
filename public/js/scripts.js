@@ -9,6 +9,7 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
+    
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -51,4 +52,33 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    $("#submitSuccessMessage").hide();
+    $("#submitErrorMessage").hide();
+    $("#contactForm").submit(function(event){
+        event.preventDefault();
+        //var formData = $("#contact-form").serializeArray();
+        var email = $('#emailAddress').val();
+        var name = $('#userName').val();
+        var bothTogether = 'Subscriber Email: ' + email + 'Subscriber Name: ' + name;
+
+        //need to add validation for error
+        //$("#submitErrorMessage").show();
+        
+        $.post("/subscribe", 
+        {
+            both: bothTogether
+        },
+        function (data){
+            console.log(data);
+
+        }
+        );
+        
+        reload();
+    });
+    function reload(){
+        $('#emailAddress').val('');
+        $('#userName').val('');
+        $("#submitSuccessMessage").show();
+    };
 });

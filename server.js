@@ -31,7 +31,7 @@ app.get("/contact", function(req, res) {
     res.sendFile(path.join(__dirname, "contact.html"));
     });
 
-/* app.post("/form", function(req, res){
+app.post("/form", function(req, res){
 
   //turned off to not recieve messages until deployed
   var sendmail = require('sendmail')();
@@ -44,7 +44,21 @@ app.get("/contact", function(req, res) {
       console.log(err && err.stack);
       console.dir(reply);
   });
-}); */
+});
+app.post("/subscribe", function(req, res){
+
+  //turned off to not recieve messages until deployed
+  var sendmail = require('sendmail')();
+  sendmail({
+      from: 'josh.jenkin@live.com',
+      to: 'jenkin79@gmail.com',
+      subject: 'New Subscriber Email',
+      html: req.body.both,
+    }, function(err, reply) {
+      console.log(err && err.stack);
+      console.dir(reply);
+  });
+});
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
