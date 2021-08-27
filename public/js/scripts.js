@@ -58,8 +58,8 @@ window.addEventListener('DOMContentLoaded', event => {
         event.preventDefault();
         //var formData = $("#contact-form").serializeArray();
         var email = $('#emailAddress').val();
-        var name = $('#userName').val();
-        var bothTogether = 'Subscriber Email: ' + email + 'Subscriber Name: ' + name;
+        //var name = $('#userName').val();
+        var bothTogether = 'Subscriber Email: ' + email
 
         //need to add validation for error
         //$("#submitErrorMessage").show();
