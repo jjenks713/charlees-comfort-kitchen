@@ -95,12 +95,13 @@ EDIT ON
   display: inline-block;
   width: 50%;
   border: none;
-  color: #ccc;
-  background-color: black;
-  padding: 0.2em 1.5em;
+  color: black;
+  font-size: 35px;
 }
 .move-btn:first-child {border-right: none;}
-.move-btn.left  { cursor: w-resize; }
+.move-btn.left  { cursor: w-resize; 
+  float: left;
+ }
 .move-btn.right { cursor: e-resize; }
 
         </style>
@@ -152,7 +153,7 @@ EDIT ON
                     <div class="img-container bg-light">
   
                         <div class="feature">
-                          <figure class="featured-item image-holder r-3-2 transition"></figure>
+                          <figure class="featured-item image-holder r-3-2 transition" style="margin-top: 25px;"></figure>
                         </div>
                         
                         <div class="gallery-wrapper">
@@ -170,10 +171,11 @@ EDIT ON
                                 <figure class="gallery-item image-holder r-3-2 transition"></figure>
                               </div>
                           </div>
-                          <div class="controls bg-dark">
-                            <button class="move-btn left black">&larr;</button>
-                            <button class="move-btn right">&rarr;</button>
+                          <div class="controls bg-light">
+                            <button class="move-btn left bg-light">&larr;</button>
+                            <button class="move-btn right bg-light">&rarr;</button>
                           </div>
+
                         </div>
                 
                       </div>
@@ -181,6 +183,9 @@ EDIT ON
                 </div>
 
             </div>
+            <br>
+            <br>
+
         </section>
 
         <!-- Projects-->
@@ -315,7 +320,7 @@ EDIT ON
                                 <div class="small text-black-50"><a href="mailto:contact@cckitchen.co">contact@cckitchen.co</a></div>
                                 <div class="small text-black-50">+1 (555) 902-8832</div><br>
                                 <div class="small text-black-50">Email us directly</div>
-                                <a href="/contact">Click Here</a>
+                                <a href="/contact/#contact-link">Click Here</a>
                             </div>
                         </div>
                     </div>
