@@ -1,5 +1,8 @@
 var express = require("express");
 var path = require('path');
+require('dotenv').config();
+
+console.log(process.env);
 
 var PORT = process.env.PORT || 3000;
 
@@ -29,6 +32,9 @@ app.get("/calendar", function(req, res) {
 
 app.get("/contact", function(req, res) {
     res.sendFile(path.join(__dirname, "contact.html"));
+    });
+app.get("/gallery", function(req, res) {
+    res.sendFile(path.join(__dirname, "gallery.html"));
     });
 
 app.post("/form", function(req, res){
