@@ -2,7 +2,6 @@ var express = require("express");
 var path = require('path');
 require('dotenv').config();
 
-console.log(process.env);
 
 var PORT = process.env.PORT || 3000;
 
@@ -36,6 +35,14 @@ app.get("/contact", function(req, res) {
 app.get("/gallery", function(req, res) {
     res.sendFile(path.join(__dirname, "gallery.html"));
     });
+
+app.get("/api", function(req, res) {
+
+  var apiKey = process.env.API_KEY;
+  var apiSecret = process.env.API_SECRET;
+  var apiObj = {apiKey, apiSecret};
+  res.status("200").json(apiObj);
+});
 
 app.post("/form", function(req, res){
 
