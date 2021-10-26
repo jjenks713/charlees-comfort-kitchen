@@ -11,10 +11,10 @@ $(document).ready(function () {
             success: function (result, status, xhr) {
                 //console.log(result);
                 $.each(result, function (i, item) {
-                    console.log(i, item);
+                    //console.log(i, item);
                     $.each(item.photo, function(n, pic){
-                        console.log(n, pic);
-                        var image = "<div class='col-md-4'><img class='float-left' style='width:100%' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg'><h4 class='text-white'>" + pic.title + "</h4></div>"
+                        //console.log(n, pic);
+                        var image = "<div class='col-md-4'><img class='float-left' style='width:100%' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg' loading='lazy'><h4 class='text-white'>" + pic.title + "</h4></div>"
                         //$("<img>").attr("src", "https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_"+ pic.secret + ".jpg").appendTo("#gallery-div");
                         $("#gallery-div").append(image);
                     })

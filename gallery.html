@@ -14,28 +14,14 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="/css/styles.css" rel="stylesheet" />
+
         <style>
-.responsiveCal {
-
- 
-
-position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
-
- 
-
-}
-
- 
-
-.responsiveCal iframe {
-
- 
-
-position: absolute; top:0; left: 0; width: 100%; height: 100%;
-
- 
-
-}
+        .responsiveCal {
+        position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+        }
+        .responsiveCal iframe {
+        position: absolute; top:0; left: 0; width: 100%; height: 100%;
+        }
         </style>
     </head>
     <body id="page-top">
@@ -180,11 +166,31 @@ position: absolute; top:0; left: 0; width: 100%; height: 100%;
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
 
+         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="/js/scripts.js"></script>
         <script src="/js/gallery.js"></script>
+
         <script>
+            $('#gallery-div').append('<div style="" id="loadingDiv"><div class="loader text-center"><img class="loader-img" src="assets/img/load.gif" alt="Loading . . ."><p style="font-size: 20px;">Loading . . .</p></div></div>');
+            $(window).on('load', function(){
+
+                setTimeout(removeLoader, 2000);
+                });
+        /*         var gridItem = $(".grid-item");
+
+                if (gridItem){
+                setTimeout(removeLoader, 500);
+                } */
+            function removeLoader(){
+                    $( "#loadingDiv" ).fadeOut(1000, function() {
+                    // fadeOut complete. Remove the loading div
+                    $( "#loadingDiv" ).remove(); //makes page more lightweight 
+
+                });  
+            }
             $(document).ready(function(){
+
                 console.log('check');
                 $(window).scroll(function() {    
                     var scroll = $(window).scrollTop();
