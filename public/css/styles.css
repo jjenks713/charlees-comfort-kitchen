@@ -11710,3 +11710,13 @@ body {
 .gallery-image {
   float: left;
 }
+.menu-title {
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 40%, #7e7e7e85 100%);
+  border-radius: 5px;
+}
+.menu-main {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(46, 43, 43, 0.479);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 5%, #55575a 75%, rgba(0, 0, 0, 0.8) 100%);
+}
