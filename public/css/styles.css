@@ -11711,7 +11711,7 @@ body {
   float: left;
 }
 .menu-title {
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 40%, #7e7e7e85 100%);
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 40%, #38373785 100%);
   border-radius: 5px;
 }
 .menu-main {
