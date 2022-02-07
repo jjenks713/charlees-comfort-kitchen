@@ -44,7 +44,7 @@ $(document).ready(function () {
                     //console.log(i, item);
                     $.each(item.photo, function(n, pic){
                         console.log(n, pic);
-                        var image = "<div class='col-md-4'><h4 class='text-white text-center'>" + pic.title + "</h4><img class='float-left' style='width:100%' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg' loading='lazy'></div>"
+                        var image = "<div class='col-md-4'><h4 class='text-white text-center'>" + pic.title + "</h4><img class='float-left' style='width:100%; height:240px; padding-right:5px' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg' loading='lazy'></div>"
                         //$("<img>").attr("src", "https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_"+ pic.secret + ".jpg").appendTo("#gallery-div");
                         $("#special-gallery").append(image);
                     })

@@ -50,7 +50,7 @@ app.post("/form", function(req, res){
   var sendmail = require('sendmail')();
   sendmail({
       from: req.body.userEmail,
-      to: 'jenkin79@gmail.com',
+      to: 'charleescomfortkitchen@gmail.com',
       subject: req.body.userSubject,
       html: req.body.userText,
     }, function(err, reply) {
@@ -64,7 +64,7 @@ app.post("/subscribe", function(req, res){
   var sendmail = require('sendmail')();
   sendmail({
       from: 'josh.jenkin@live.com',
-      to: 'jenkin79@gmail.com',
+      to: 'charleescomfortkitchen@gmail.com',
       subject: 'New Subscriber Email',
       html: req.body.both,
     }, function(err, reply) {
