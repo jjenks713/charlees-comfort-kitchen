@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $.get("/api", function(data){
-        console.log(data.apiKey);
+        console.log(data);
 
 
         var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=" + data.apiKey + "&user_id=194257058%40N07&format=json&nojsoncallback=1";
