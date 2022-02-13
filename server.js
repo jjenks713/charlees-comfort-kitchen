@@ -38,8 +38,8 @@ app.get("/gallery", function(req, res) {
 
 app.get("/api", function(req, res) {
 
-  var apiKey = process.env.API_KEY;
-  var apiSecret = process.env.API_SECRET;
+  var apiKey = apiKey;
+  var apiSecret = apiSecret;
   var apiObj = {apiKey, apiSecret};
   res.status("200").json(apiObj);
   console.log(apiObj)
