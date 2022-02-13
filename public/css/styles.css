@@ -11720,3 +11720,16 @@ body {
   background-color: rgba(46, 43, 43, 0.479);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 5%, #55575a 75%, rgba(0, 0, 0, 0.8) 100%);
 }
+.grid-item { width: 400px;
+  padding:10px;
+  top: 2654.72px;
+  }
+  .grid-item--width2 { width: 300px; }
+
+  @media only screen and (max-width : 750px) {
+    .grid-item { 
+      width: 100%;
+      padding:10px;
+      top: 2654.72px;
+      }
+  }

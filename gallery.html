@@ -60,7 +60,9 @@
         <!-- About-->
         <section class="about-section text-center" id="about">
             <div class="container px-4 px-lg-5">
-                <div class="row" id="gallery-div">
+                <div class="row grid" id="gallery-div">
+                    <div class="gutter-sizer"></div>
+                    <div class="grid-sizer"></div> 
 
                 </div>
 
@@ -165,12 +167,14 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="/js/scripts.js"></script>
         <script src="/js/gallery.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
         <script>
             $('#gallery-div').append('<div style="" id="loadingDiv"><div class="loader text-center"><img class="loader-img" src="assets/img/load.gif" alt="Loading . . ."><p style="font-size: 20px;">Loading . . .</p></div></div>');
             $(window).on('load', function(){
 
-                setTimeout(removeLoader, 2000);
+                setTimeout(removeLoader, 4000);
                 });
         /*         var gridItem = $(".grid-item");
 
@@ -197,6 +201,13 @@
                         $(".navbar").removeClass("navbar-shrink");
                     }
                 });
+                $('selector').masonry()
+          //$('selector').masonry()
+                $('.grid').masonry({
+                    // options
+                    itemSelector: '.grid-item',
+                    columnWidth: 200
+                    });
             });
         </script>
     </body>

@@ -1,7 +1,16 @@
 $(document).ready(function () {
 
+    var mediaItemContainer = $('#gallery-div');
+        //$('selector').masonry()
+        $('.grid').masonry({
+            // options
+            itemSelector: '.grid-item',
+            columnWidth: 100
+          });
+
+
     $.get("/api", function(data){
-        //console.log(data);
+        console.log(data);
 
 
         var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=" + data.apiKey + "&user_id=194257058%40N07&format=json&nojsoncallback=1";
@@ -15,10 +24,13 @@ $(document).ready(function () {
                     //console.log(i, item);
                     $.each(item.photo, function(n, pic){
                         //console.log(n, pic);
-                        var image = "<div class='col-md-4'><img class='float-left' style='width:100%' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg' loading='lazy'><h4 class='text-white'>" + pic.title + "</h4></div>"
+                        var image = "<div class='col-md-4 grid-item'><h4 class='text-white'>" + pic.title + "</h4><img class='float-left' style='width:100%' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg' loading='lazy'></div>"
                         //$("<img>").attr("src", "https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_"+ pic.secret + ".jpg").appendTo("#gallery-div");
-                        $("#gallery-div").prepend(image);
-
+                        //$("#gallery-div").prepend(image);
+                        //$("#display-div"). append(displayDiv).masonry('appended', displayDiv);
+                        mediaItemContainer.append(image).masonry( 'appended', image );
+                        mediaItemContainer.masonry( 'reloadItems' );
+                        mediaItemContainer.masonry( 'layout' );
                     })
 
                 });
@@ -49,6 +61,7 @@ $(document).ready(function () {
                         var image = "<div class='col-md-4'><h4 class='text-white text-center'>" + pic.title + "</h4><img class='float-left' style='width:100%; height:240px; padding-right:5px' src='https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_" + pic.secret + ".jpg' loading='lazy'></div>"
                         //$("<img>").attr("src", "https://live.staticflickr.com/"+ pic.server + "/"+ pic.id + "_"+ pic.secret + ".jpg").appendTo("#gallery-div");
                         $("#special-gallery").append(image);
+
                     })
 
                 });
@@ -64,6 +77,17 @@ $(document).ready(function () {
 
 
 
+
+    $('selector').masonry()
+
+    var freeMasonry = $('.grid');
+
+    freeMasonry.imagesLoaded()
+        .done(function(){
+        freeMasonry.masonry({
+            itemSelector: '.grid-item'
+        });
+        });
 
 
 
