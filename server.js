@@ -38,13 +38,6 @@ app.get("/gallery", function(req, res) {
 
 app.get("/api", function(req, res) {
 
-  exports.envVar = (req, res) => {
-    // Sends 'bar' as response
-    res.send(process.env.FOO);
-    console.log("inside enVar", process.env)
-
-  };
-
   var apiKey = process.env.apiKey;
   var apiSecret = process.env.apiSecret;
   var apiObj = {apiKey, apiSecret};
