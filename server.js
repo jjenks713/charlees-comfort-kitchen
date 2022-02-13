@@ -42,7 +42,7 @@ app.get("/api", function(req, res) {
   var apiSecret = process.env.apiSecret;
   var apiObj = {apiKey, apiSecret};
   res.status("200").json(apiObj);
-  console.log(apiObj)
+  console.log(apiObj, "this ya know")
 });
 
 app.post("/form", function(req, res){
